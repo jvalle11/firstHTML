@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Target Logo</title>
+        <style>
+            canvas {
+                border: 1px;
+            }
+        </style>
+        <body>
+            <P>target logo maker<br><button type='button' onclick="draw()">CLICK FOR LOGO</button></P>
+        </body>
+        <script>
+            
+            function draw() 
+            {
+                var canvas = document.getElementById('target');
+                var ctx = canvas.getContext('2d');
+
+                ctx.beginPath();
+                ctx.arc(150, 125 , 97, 0, 2*Math.PI, true);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(200, 100);
+                ctx.arc(150, 125, 67, 0, 2*Math.PI, true)
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.arc(150, 125 , 36, 0, 2*Math.PI, true);
+                ctx.fillStyle = 'red';
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.font = 'bold 45px Helvetica';
+                ctx.fillText("TARGET", 60, 270);
+
+                
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <canvas id= "target" width="400px" height="500px"></canvas>
+    </body>
+</html>
